@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: aptos
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - APTOS_ADDR=0xaee26cfafa2f809518dc427146ac1e42dcf4023a044b7a3c67278b911049c92c
+      - MINT_AMOUNT=1000000
+      - DELAY=5000
